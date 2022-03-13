@@ -11,7 +11,7 @@ export interface ColumnsProps extends LayoutProps {
     centerContent?: boolean
 }
 
-const { as: Tag = 'div', maxWidth, centerText = false, centerContent = false, style = '', ...props } = Astro.props as ColumnsProps
+const { theme = {}, as: Tag = 'div', maxWidth = 'medium', centerText = false, centerContent = false, style = '', ...props } = Astro.props as ColumnsProps
 
 const safeMaxWidth = typeof maxWidth === 'number' && maxWidth > 0
     ? `${maxWidth}px`
