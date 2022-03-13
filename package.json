@@ -1,0 +1,45 @@
+{
+    "name": "@chisel-ui/center",
+    "version": "0.0.1",
+    "description": "chisel-ui center layout primitive",
+    "private": false,
+    "type": "module",
+    "exports": {
+        "./css": "./dist/Center.css",
+        "./astro": "./src/Center.astro"
+    },
+    "files": [
+        "src",
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsup src/Center.css --clean",
+        "watch": "npm run build -- --watch src",
+        "prepublishOnly": "npm run build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/chisel-ui/center.git"
+    },
+    "keywords": [
+        "astro",
+        "center",
+        "layout"
+    ],
+    "author": "tony-sull <tony.f.sullivan@outlook.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/chisel-ui/center/issues"
+    },
+    "homepage": "https://github.com/chisel-ui/center#readme",
+    "devDependencies": {
+        "@chisel-ui/core": "^0.0.5",
+        "autoprefixer": "^10.4.2",
+        "postcss": "^8.4.8",
+        "tsup": "^5.12.1",
+        "typescript": "^4.6.2"
+    },
+    "peerDependencies": {
+        "astro": "^0.24.0"
+    }
+}

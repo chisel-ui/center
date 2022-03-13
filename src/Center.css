@@ -1,0 +1,23 @@
+@property --maxWidth {
+    syntax: "<length-percentage>";
+    inherits: false;
+    initial-value: 100%;
+}
+
+[data-chisel-center] {
+    box-sizing: content-box;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    margin-inline: auto;
+    max-inline-size: var(--maxWidth, 100%);
+}
+
+[data-chisel-center~="content"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+[data-chisel-center~="text"] {
+    text-align: center;
+}
